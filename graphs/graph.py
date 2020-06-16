@@ -68,9 +68,10 @@ class Graph:
         Returns:
         Vertex: The new vertex object.
         """
+        vt = Vertex(vertex_id)
+        self.__vertex_dict[vertex_id] = vt
+        return vt
 
-
-        pass
 
 
     def get_vertex(self, vertex_id):
