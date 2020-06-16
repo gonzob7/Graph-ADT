@@ -8,7 +8,7 @@ class Vertex(object):
     def __init__(self, vertex_id):
         """
         Initialize a vertex and its neighbors dictionary.
-        
+
         Parameters:
         vertex_id (string): A unique identifier to identify this vertex.
         """
@@ -22,6 +22,8 @@ class Vertex(object):
         Parameters:
         vertex_obj (Vertex): An instance of Vertex to be stored as a neighbor.
         """
+        self.__neighbors_dict[vertex_obj.__id] = vertex_obj
+
         pass
 
     def __str__(self):
@@ -59,15 +61,17 @@ class Graph:
     def add_vertex(self, vertex_id):
         """
         Add a new vertex object to the graph with the given key and return the vertex.
-        
+
         Parameters:
         vertex_id (string): The unique identifier for the new vertex.
 
         Returns:
         Vertex: The new vertex object.
         """
+
+
         pass
-        
+
 
     def get_vertex(self, vertex_id):
         """Return the vertex if it exists."""
@@ -86,11 +90,11 @@ class Graph:
         vertex_id2 (string): The unique identifier of the second vertex.
         """
         pass
-        
+
     def get_vertices(self):
         """
         Return all vertices in the graph.
-        
+
         Returns:
         List<Vertex>: The vertex objects contained in the graph.
         """
@@ -161,7 +165,7 @@ class Graph:
         }
 
         # queue of vertices to visit next
-        queue = deque() 
+        queue = deque()
         queue.append(self.get_vertex(start_id))
 
         # while queue is not empty
@@ -191,7 +195,7 @@ class Graph:
     def find_vertices_n_away(self, start_id, target_distance):
         """
         Find and return all vertices n distance away.
-        
+
         Arguments:
         start_id (string): The id of the start vertex.
         target_distance (integer): The distance from the start vertex we are looking for
