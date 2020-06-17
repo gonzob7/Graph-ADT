@@ -90,6 +90,10 @@ class Graph:
         vertex_id1 (string): The unique identifier of the first vertex.
         vertex_id2 (string): The unique identifier of the second vertex.
         """
+        self.__vertex_dict[vertex_id1].add_neighbor(self.__vertex_dict[vertex_id2])
+
+        if not self.__is_directed:
+            self.__vertex_dict[vertex_id1].add_neighbor(self.__vertex_dict[vertex_id2])
         pass
 
     def get_vertices(self):
